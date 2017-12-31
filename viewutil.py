@@ -31,7 +31,11 @@ def admin_url(obj):
 # Adapted from http://djangosnippets.org/snippets/1474/
 def get_request_server_url(request):
     if request:
+<<<<<<< HEAD
         serverName = settings.DOMAIN
+=======
+        serverName = request.META['SERVER_NAME']
+>>>>>>> 2c475bcd7d613298f69bbfce3914a0206429dc10
         protocol = "https://" if request.is_secure() else "http://"
         return protocol + serverName
     else:
